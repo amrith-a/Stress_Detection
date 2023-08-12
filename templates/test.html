@@ -1,0 +1,83 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+	<title>Login V4</title>
+	<meta charset="UTF-8">
+	<meta name="viewport" content="width=device-width, initial-scale=1">
+<!--===============================================================================================-->
+
+
+<!--===============================================================================================-->
+	<link rel="stylesheet" type="text/css" href="static/styles/fonts/font-awesome-4.7.0/css/font-awesome.min.css">
+<!--===============================================================================================-->
+	<link rel="stylesheet" type="text/css" href="static/styles/fonts/iconic/css/material-design-iconic-font.min.css">
+
+
+<!--===============================================================================================-->
+	<link rel="stylesheet" type="text/css" href="static/styles/util.css">
+	<link rel="stylesheet" type="text/css" href="static/styles/main.css">
+<!--===============================================================================================-->
+</head>
+<body>
+
+	<div class="limiter">
+		<div class="container-login100" style="background-image: url('static/bg-01.jpg');">
+			<div  class="wrap-login100 p-l-55 p-r-55 p-t-65 p-b-54" style="width: 50%">
+				<form class="login100-form validate-form" action="/predict" method="post" >
+					<span style="color: #c80000; text-align: center;" class="login100-form-title p-b-49">
+
+ 							<h1>{{data[3:-3]}}</h1>
+						</span>
+					    <span class="login100-form-title p-b-49">
+						{% set x=data[3:-3] %}
+						{% if x=="Possibility of Stress" %}
+							<h3><u>Remedies</u></h3>
+						<p>
+						<ul>
+						  <li>1. Get more physical activity.</li>
+						  <li>2. The potential health benefits of yoga include: Stress reduction.</li>
+						</ul>
+							<div class="container-login100" style="background-image: url('static/yoga.jpg');  background-size: 100% ">
+							</div>
+							<ul>
+						  <li>3. Healthy food Habits has a great impact on reducing stress level.</li>
+								<div class="container-login100" style="background-image: url('static/food.jpg');  background-size: 100%">
+							</div>
+						  <li>4. Reduce your caffeine intake.</li>
+							<li>5. Spend time with friends and family.</li>
+								<li>6. Consult Psychologist</li>
+						</ul>
+						</p>
+						{% endif %}
+							{% if x=="No stress" %}
+							<p ><h2 style="color: green">STAY HEALTHY!!!</h2></p>
+							<div class="container-login100" style="background-image: url('static/emoji.jpg');  background-size: 100%" style="height: 70%">
+							</div>
+							{% endif %}
+					    </span>
+
+
+					<div class="text-right p-t-8 p-b-31">
+
+					</div>
+					<div class="container-login100-form-btn">
+						<div class="wrap-login100-form-btn">
+							<div class="login100-form-bgbtn"></div>
+							 <button class="login100-form-btn"  type="submit" name="goback" value="goback"><a style="text-decoration:none" href='/'>BACK</a></button>
+						</div>
+					</div>
+
+				</form>
+			</div>
+		</div>
+	</div>
+
+
+	<div id="dropDownSelect1"></div>
+
+
+<!--===============================================================================================-->
+	<script src="static/styles/javascript.js"></script>
+
+</body>
+</html>
